@@ -1,0 +1,31 @@
+body{
+    background-color:white;
+}
+h1{
+    color:gray;
+}
+.amount{
+    color:black;
+    text-align: center;
+}
+.rate{
+    color:black;
+    text-align: center;
+}
+.years{
+    color:black;
+    text-align: center;
+}
+output{
+    color:black;
+}
+.button{
+    color:black;
+    text-align: center;
+}
+.bottom{
+    color:black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
