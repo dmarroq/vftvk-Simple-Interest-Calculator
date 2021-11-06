@@ -10,7 +10,7 @@ function compute() {
     var result = document.getElementById("result");
 
     if (p <= 0){
-        result.innerHTML = "Please enter a positive number"
+        alert("Please enter a positive number");
     } else {
         result.innerHTML = "If you deposit " + 
         p + ",\n at an interest rate of " + 
