@@ -1,31 +1,17 @@
 body{
-    background-color:white;
+    background-color:black;
+    font-family:arial;
+    color:white;
 }
 h1{
     color:gray;
+    font:verdana;
 }
-.amount{
+.maindiv {
+    background-color:white;
     color:black;
-    text-align: center;
-}
-.rate{
-    color:black;
-    text-align: center;
-}
-.years{
-    color:black;
-    text-align: center;
-}
-output{
-    color:black;
-}
-.button{
-    color:black;
-    text-align: center;
-}
-.bottom{
-    color:black;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    width:300px;
+    padding:20px;
+    border-radius:25px;
+    align:center;
 }
