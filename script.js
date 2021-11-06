@@ -8,13 +8,6 @@ function compute() {
     var futureYear = new Date().getFullYear() + parseInt(t);  //Future Year
 
     var result = document.getElementById("result");
-    
-    function highlight(text) {
-        document.body.innerHTML = document.body.innerHTML.replace(
-            new RegExp(text + '(?!([^<]+)?<)', 'gi'),
-            '<b style="background-color:#ff0;font-size:100%">$&</b>'
-        );
-    };
 
     if (p <= 0){
         result = alert("Please enter a positive number");
@@ -32,3 +25,13 @@ function updateRate() {
 
     document.getElementById("rate_val").innerText = rateval;
 };
+
+function highlight(text) {
+    var inputText = document.getElementById("inputText");
+    var innerHTML = inputText.innerHTML;
+    var index = innerHTML.indexOf(text);
+    if (index >= 0) { 
+     innerHTML = innerHTML.substring(0,index) + "<span class='highlight'>" + innerHTML.substring(index,index+text.length) + "</span>" + innerHTML.substring(index + text.length);
+     inputText.innerHTML = innerHTML;
+    }
+  };
