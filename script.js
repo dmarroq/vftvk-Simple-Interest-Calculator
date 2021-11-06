@@ -1,16 +1,28 @@
-function compute()
-{
+function compute() {
     var p = document.getElementById("principal").value; //Amount deposited
-    var r = document.getElementById("rate").value; //Rate of interest
+    var i = document.getElementById("rate").value; //Rate of interest
     var t = document.getElementById("years").value; //Years in deposit
+    
+    var si = p * t * i / 100;   //Simple Interest rate
 
-    var currentYear = new Date().getFullYear();  //Current year
+    var futureYear = new Date().getFullYear() + parseInt(t);  //Future Year
 
-    var futureDate = currentYear + t;
-    var si = p * r * t;
+    var result = document.getElementById("result");
 
-    print("If you deposit " + p + 
-    ", \n at an interest rate of " + r + 
-    ".\n You will receive an amount of " + si +
-    "in the year " + futureDate)
-}
+    if (p <= 0){
+        result.innerHTML = "Please enter a positive number"
+    } else {
+        result.innerHTML = "If you deposit " + 
+        p + ",\n at an interest rate of " + 
+        i + "%.\n You will receive an amount of " + 
+        si + "\n in the year " + futureYear + "."
+        
+    };
+    
+};
+
+function updateRate() {
+    var rateval = document.getElementById("rate").value;
+
+    document.getElementById("rate_val").innerText = rateval;
+};
