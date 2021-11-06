@@ -8,15 +8,21 @@ function compute() {
     var futureYear = new Date().getFullYear() + parseInt(t);  //Future Year
 
     var result = document.getElementById("result");
+    
+    function highlight(text) {
+        document.body.innerHTML = document.body.innerHTML.replace(
+            new RegExp(text + '(?!([^<]+)?<)', 'gi'),
+            '<b style="background-color:#ff0;font-size:100%">$&</b>'
+        );
+    };
 
     if (p <= 0){
         result = alert("Please enter a positive number");
     } else {
-        result.innerHTML = "If you deposit " + 
-        p + ",\n at an interest rate of " + 
-        i + "%.\n You will receive an amount of " + 
-        si + "\n in the year " + futureYear + "."
-        
+        result = "If you deposit " + 
+        highlight(p) + ",\n at an interest rate of " + 
+        highlight(i) + "%.\n You will receive an amount of " + 
+        highlight(si) + "\n in the year " + highlight(futureYear) + ".";
     };
     
 };
