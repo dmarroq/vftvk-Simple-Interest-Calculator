@@ -13,9 +13,9 @@ function compute() {
         result = alert("Please enter a positive number");
     } else {
         result = "If you deposit " + 
-        highlight(p) + ",\n at an interest rate of " + 
-        highlight(i) + "%.\n You will receive an amount of " + 
-        highlight(si) + "\n in the year " + highlight(futureYear) + ".";
+        p + ",\n at an interest rate of " + 
+        i + "%.\n You will receive an amount of " + 
+        si + "\n in the year " + futureYear + ".";
     };
     
 };
