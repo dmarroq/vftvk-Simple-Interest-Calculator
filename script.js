@@ -13,7 +13,7 @@ function compute() {
         result = alert("Please enter a positive number");
     } else {
         result.innerHTML = "If you deposit " + 
-        p + ",\n at an interest rate of " + 
+        p + ",\n at an annual interest rate of " + 
         i + "%.\n You will receive an amount of " + 
         si + "\n in the year " + futureYear + "."
         
