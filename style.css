@@ -10,8 +10,9 @@ h1{
 .maindiv {
     background-color:white;
     color:black;
-    width:300px;
-    padding:20px;
-    border-radius:25px;
-    box-align:center;
+    width: 400px;
+    padding: 40px;
+    border-radius: 50px;
+    box-align: center;
+    margin: auto;
 }
