@@ -1,16 +1,51 @@
+<!DOCTYPE html>
 <html>
     <head>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
+    <div class="maindiv">
+        <body>
+            <h1>Web App - Simple Interest Calculator</h1>
+            <div class="amount">
+                Amount <input type="number"  id="principal">
+            </div>
+            <br/>
+            <div class="rate">
+                Rate <input type="range" id ="rate" min="1" max="20" step=".25" value="10.25" oninput="updateRate(this.value)">
+                <!Used oninput instead of onchange because it appeared more dynamic> 
+                <span id="rate_val">10.25</span>%
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
-    </body>
+            </div>
+            <br/>
+            <div class="years">
+                No. of Years <select name="years"  id="years"> 
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <br/>
+            <div class="button">
+                <button onclick="compute()">Compute Interest</button>
+                <br/>
+                <span id="result">
+                    
+                </span>
+            </div>
+            <br/>
+            <div class="bottom">
+                <footer>
+                    &#169; This Calculator belongs to Diego Marroquin
+                </footer>
+            </div>
+        </body>
+    </div>
 </html>
